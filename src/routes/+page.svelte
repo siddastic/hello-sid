@@ -308,7 +308,7 @@
 	</section>
 
 	<footer class="footer">
-		<p>built with sveltekit, threlte, custom glsl. <a href="https://github.com/siddastic" target="_blank" rel="noreferrer">source on github ↗</a></p>
+		<p>built with sveltekit, three.js, custom glsl. <a href="https://github.com/siddastic/hello-sid" target="_blank" rel="noreferrer">source on github ↗</a></p>
 		<p>© 2026 siddhant gaurav sharma · {host}</p>
 	</footer>
 </main>
