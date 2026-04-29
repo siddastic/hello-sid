@@ -1,0 +1,38 @@
+{
+	"name": "sid-portfolio",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"prebuild": "tsx scripts/build-thumbs.ts",
+		"build": "vite build",
+		"postbuild": "tsx scripts/build-cv-pdf.ts && tsx scripts/build-og-image.ts",
+		"preview": "vite preview",
+		"thumbs": "tsx scripts/build-thumbs.ts",
+		"cv:pdf": "tsx scripts/build-cv-pdf.ts",
+		"og:image": "tsx scripts/build-og-image.ts",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+	},
+	"devDependencies": {
+		"@napi-rs/canvas": "^0.1.100",
+		"@sveltejs/adapter-static": "^3.0.10",
+		"@sveltejs/kit": "^2.57.0",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"@types/three": "^0.184.0",
+		"puppeteer-core": "^24.42.0",
+		"svelte": "^5.55.2",
+		"svelte-check": "^4.4.6",
+		"tsx": "^4.21.0",
+		"typescript": "^6.0.2",
+		"vite": "^8.0.7"
+	},
+	"dependencies": {
+		"@fontsource/jetbrains-mono": "^5.2.8",
+		"lenis": "^1.3.23",
+		"three": "^0.184.0",
+		"vite-plugin-glsl": "^1.6.0"
+	}
+}

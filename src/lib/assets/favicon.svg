@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Sid">
+	<rect width="32" height="32" rx="6" fill="#050608"/>
+	<!-- Tilde from `~/sid` wordmark. -->
+	<path
+		d="M4 17 Q 8 11, 12 17 T 20 17"
+		stroke="#5af0a8"
+		stroke-width="3"
+		stroke-linecap="round"
+		stroke-linejoin="round"
+		fill="none"
+	/>
+	<!-- Cursor block — mirrors the blinking hero cursor. -->
+	<rect x="23" y="13.5" width="5" height="6.5" fill="#5af0a8" rx="1"/>
+</svg>

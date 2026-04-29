@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://sid.is-not-a.dev/sitemap.xml

@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Same security + cache headers as the Cloudflare Pages _headers file —
+# Netlify reads `static/_headers` automatically once it's in the publish
+# dir, so we don't repeat them here.
+
+# Optional: keep deploy-preview URLs out of search engines.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "all"

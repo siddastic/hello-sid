@@ -1,0 +1,65 @@
+@import '@fontsource/jetbrains-mono/latin-400.css';
+@import '@fontsource/jetbrains-mono/latin-500.css';
+@import './lib/brand.css';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background: var(--ns-obsidian);
+	color: var(--ns-text-hi);
+	font-family: var(--ns-mono);
+	font-size: 14px;
+	line-height: 1.55;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	min-height: 100svh;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+::selection {
+	background: var(--ns-mint);
+	color: var(--ns-obsidian);
+}
+
+/* JS-driven scroll active: hide fade-up targets until IO marks them visible.
+ * Without JS / under reduced motion they stay visible — graceful fallback. */
+html.has-scroll [data-fadeup] {
+	opacity: 0;
+	transform: translateY(16px);
+	transition:
+		opacity 600ms ease,
+		transform 600ms ease;
+}
+
+html.has-scroll [data-fadeup].is-visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+
+/* Reduced-motion: kill all animation/transition durations. Per BUILD_BRIEF §8. */
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
