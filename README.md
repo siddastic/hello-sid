@@ -2,7 +2,7 @@
 
 [![hello-sid hero](static/og-image.png)](https://hello-sid.netlify.app)
 
-The source for **[hello-sid.netlify.app](https://hello-sid.netlify.app)** — Sid's portfolio.
+The source for **[hello-sid.netlify.app](https://hello-sid.netlify.app)** — My portfolio website :)
 
 A static SvelteKit site with a WebGL dither hero, scroll-driven phrase reel, CRT page transitions, and a build-time CV PDF generator.
 
@@ -42,5 +42,3 @@ No Tailwind. Vanilla CSS with custom-property tokens at [`src/lib/brand.css`](sr
 - Content lives in [`src/lib/data/`](src/lib/data) — `projects.ts`, `experience.ts`, `skills.ts`, `socials.ts`, `heroPhrases.ts`. Change copy there; the rendering picks it up everywhere (home page, detail routes, sitemap, CV PDF).
 
 ---
-
-Built with [Claude Code](https://claude.com/claude-code).
